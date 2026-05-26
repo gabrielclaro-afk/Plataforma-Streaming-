@@ -1,32 +1,31 @@
 <?php
 
 declare(strict_types=1);
-require_once 'Midia.php';
-require_once 'Reproduzivel.php';
 
-class Podcast extends Midia implements Reproduzivel {
+class Podcast extends Midia {
     private string $descricao;
     private int $episodio;
 
     public function __construct(string $descricao, int $episodio) {
-        $this->descricao = $novodescricao;
-        $this->episodio = $novoepisodio;
+
+        $this->descricao = $descricao;
+        $this->episodio = $episodio;
     }
 
     public function getDescricao(): string {
         return $this->descricao;
     }
 
-    public function setDescricao($novodescricao): void {
-        $this->descricao = $novodescricao;
+    public function setDescricao($novoDescricao): void {
+        $this->descricao = $novoDescricao;
     }
 
     public function getEpisodio(): int {
         return $this->episodio;
     }
 
-    public function setEpsodio($novoepisodio): void {
-        $this->episodio = $novoepisodio;
+    public function setEpisodio($novoEpisodio): void {
+        $this->episodio = $novoEpisodio;
     }
 
 

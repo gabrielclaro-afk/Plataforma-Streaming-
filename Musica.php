@@ -1,7 +1,9 @@
 <?php
 declare (strict_types= 1);
 require_once 'Midia.php';
-    class Musica extends Midia {
+require_once 'Reproduzivel.php';
+
+    class Musica extends Midia implements Reproduzivel {
         private int $id;
         private string $genero;
         private string $album;
@@ -35,5 +37,8 @@ require_once 'Midia.php';
         public function setAlbum(string $album) : void {
             $this->album = $album;
         }
+
+        public function reproduzir() : string {
+            
     }
 ?>
