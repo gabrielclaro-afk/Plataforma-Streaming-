@@ -8,9 +8,10 @@ class Podcast extends Midia {
     private string $descricao;
     private int $episodio;
 
-    public function __construct(string $descricao, int $episodio) {
-        $this->descricao = $novoDescricao;
-        $this->episodio = $novoEpisodio;
+    public function __construct(string $autor, string $titulo, int $duracaoSegundos, string $descricao = '', int $episodio = 0) {
+        parent::__construct($autor, $titulo, $duracaoSegundos);
+        $this->descricao = $descricao;
+        $this->episodio = $episodio;
     }
 
     public function getDescricao(): string {
@@ -25,7 +26,7 @@ class Podcast extends Midia {
         return $this->episodio;
     }
 
-    public function setEpsodio($novoEpisodio): void {
+    public function setEpisodio($novoEpisodio): void {
         $this->episodio = $novoEpisodio;
     }
 
