@@ -25,10 +25,11 @@ class Podcast extends Midia implements Reproduzivel {
         return $this->episodio;
     }
 
-    public function setEpsodio($novoepisodio): void {
+    public function setEpisodio($novoepisodio): void {
         $this->episodio = $novoepisodio;
     }
 
 
-
 }
+
+?>
