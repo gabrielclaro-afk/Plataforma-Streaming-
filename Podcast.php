@@ -1,4 +1,4 @@
-<?php
+++<?php
 
 declare(strict_types=1);
 
@@ -24,10 +24,11 @@ class Podcast extends Midia {
         return $this->episodio;
     }
 
-    public function setEpisodio($novoEpisodio): void {
-        $this->episodio = $novoEpisodio;
+    public function setEpisodio($novoepisodio): void {
+        $this->episodio = $novoepisodio;
     }
 
 
-
 }
+
+?>
