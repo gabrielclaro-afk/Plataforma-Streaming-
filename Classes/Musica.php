@@ -39,6 +39,8 @@ require_once 'Reproduzivel.php';
         }
 
         public function reproduzir() : string {
+            echo 'Reproduzindo a musica ' . $this->getTitulo() . PHP_EOL;
+        }
             
     }
 ?>

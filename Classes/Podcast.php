@@ -8,9 +8,10 @@ class Podcast extends Midia implements Reproduzivel {
     private string $descricao;
     private int $episodio;
 
-    public function __construct(string $descricao, int $episodio) {
-        $this->descricao = $novodescricao;
-        $this->episodio = $novoepisodio;
+    public function __construct(string $autor, string $titulo, int $duracaoSegundos, string $descricao = '', int $episodio = 0) {
+        parent::__construct($autor, $titulo, $duracaoSegundos);
+        $this->descricao = $descricao;
+        $this->episodio = $episodio;
     }
 
     public function getDescricao(): string {
@@ -25,8 +26,12 @@ class Podcast extends Midia implements Reproduzivel {
         return $this->episodio;
     }
 
-    public function setEpsodio($novoepisodio): void {
-        $this->episodio = $novoepisodio;
+    public function setEpisodio($novoEpisodio): void {
+        $this->episodio = $novoEpisodio;
+    }
+
+    public function reproduzir(): string {
+        return "Reproduzindo: " . $this->getTitulo();
     }
 
 
