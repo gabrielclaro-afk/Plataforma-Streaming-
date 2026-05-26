@@ -24,7 +24,7 @@ abstract class Midia {
     public function setDuracaoSegundos($novaDuracao):void {
         $this->duracaoSegundos = $novaDuracao;
     }
-    public function getDuracaoFormatada():float {
+    public function DuracaoFormatada():float {
         $tempoMinuto = $this->duracaoSegundos / 60;
         number_format($tempoMinuto, 2);
         return $tempoMinuto;
