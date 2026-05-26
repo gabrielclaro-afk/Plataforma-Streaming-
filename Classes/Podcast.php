@@ -1,13 +1,14 @@
 <?php
 
 declare(strict_types=1);
+require_once 'Midia.php';
+require_once 'Reproduzivel.php';
 
 class Podcast extends Midia {
     private string $descricao;
     private int $episodio;
 
     public function __construct(string $descricao, int $episodio) {
-
         $this->descricao = $novoDescricao;
         $this->episodio = $novoEpisodio;
     }
