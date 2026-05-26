@@ -11,12 +11,12 @@ echo $musica->reproduzir() . PHP_EOL;
 echo "Duração: " . $musica->duracaoFormatada() . PHP_EOL;
 
 echo PHP_EOL . "=== Testando Podcast ===" . PHP_EOL;
-$podcast = new Podcast('Joe Rogan', 'The JRE', 3600, 'Entrevista especial', 2100);
+$podcast = new Podcast('Monark', 'FlowPodcast', 3600, 'Entrevista especial', 2100);
 echo $podcast->reproduzir() . PHP_EOL;
 echo "Duração: " . $podcast->duracaoFormatada() . PHP_EOL;
 
 echo PHP_EOL . "=== Testando VideoCurto ===" . PHP_EOL;
-$video = new VideoCurto('MrBeast', 'Desafio impossível', 58);
+$video = new VideoCurto('Nabi o libanes', 'Comédia', 58);
 echo $video->reproduzir() . PHP_EOL;
 echo "Duração: " . $video->duracaoFormatada() . PHP_EOL;
 
