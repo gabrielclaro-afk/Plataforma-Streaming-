@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+require_once 'Midia.php';
+require_once 'Reproduzivel.php';
+
 class Playlist {
     private array $midias = [];
 
@@ -8,7 +11,7 @@ class Playlist {
         private string $nome
     ) {}
 
-    public function adicionarMidia(Midia $midia): void {
+    public function adicionarMidia(Midia&Reproduzivel $midia): void {
         $this->midias[] = $midia;
     }
 
@@ -22,5 +25,3 @@ class Playlist {
         return $this->nome;
     }
 }
-
-?>
