@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"VideoCurtoTest::testConstrutor":0.005,"VideoCurtoTest::testReproducir":0.001,"VideoCurtoTest::testSetAutor":0,"VideoCurtoTest::testSetTitulo":0,"VideoCurtoTest::testSetDuracaoSegundos":0,"VideoCurtoTest::testDuracaoFormatada":0,"VideoCurtoTest::testImplementaInterface":0}}
