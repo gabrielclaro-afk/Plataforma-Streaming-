@@ -13,36 +13,36 @@ final class MidiaTest extends TestCase
 {
     public function testMusicaGettersESetter(): void
     {
-        $musica = new Musica('Autor', 'Titulo', 125, 1, 'Rock', 'Album');
+        $musica = new Musica('AC/DC', 'Back in Black', 125, 1, 'Rock', 'Back in Black');
 
-        $this->assertSame('Autor', $musica->getAutor());
-        $this->assertSame('Titulo', $musica->getTitulo());
+        $this->assertSame('AC/DC', $musica->getAutor());
+        $this->assertSame('Back in Black', $musica->getTitulo());
         $this->assertSame(125, $musica->getDuracaoSegundos());
         $this->assertSame('Rock', $musica->getGenero());
-        $this->assertSame('Album', $musica->getAlbum());
+        $this->assertSame('Back in Black', $musica->getAlbum());
 
-        $musica->setTitulo('Novo Titulo');
-        $this->assertSame('Novo Titulo', $musica->getTitulo());
+        $musica->setTitulo('Dirty Deeds Done Dirt Cheap');
+        $this->assertSame('Dirty Deeds Done Dirt Cheap', $musica->getTitulo());
     }
 
     public function testDuracaoFormatada(): void
     {
-        $musica = new Musica('Autor', 'Titulo', 125, 1, 'Rock', 'Album');
+        $musica = new Musica('Queen', 'We Will Rock You', 125, 1, 'Rock', 'News of the World');
         $this->assertSame('02:05', $musica->duracaoFormatada());
     }
 
     public function testPlaylistReproduzirTodosExibeSaida(): void
     {
-        $musica = new Musica('Autor', 'Titulo', 125, 1, 'Rock', 'Album');
-        $podcast = new Podcast('Autor2', 'PodTitulo', 300, 'Descricao', 5);
+        $musica = new Musica('Nirvana', 'Smells Like Teen Spirit', 125, 1, 'Rock', 'Nevermind');
+        $podcast = new Podcast('Flow Podcast', 'Conversa com Lula', 300, 'Conversando com Lula', 5);
 
-        $playlist = new Playlist('Minha Playlist');
+        $playlist = new Playlist('minhas musicas e podcasts');
         $playlist->adicionarMidia($musica);
         $playlist->adicionarMidia($podcast);
 
         $this->expectOutputString(
-            "Reproduzindo a musica Titulo" . PHP_EOL .
-            "Reproduzindo podcast: PodTitulo (Ep. 5)" . PHP_EOL
+            "Reproduzindo a musica: Smells Like Teen Spirit" . PHP_EOL .
+            "Reproduzindo podcast: Conversa com Lula (Ep. 5)" . PHP_EOL
         );
 
         $playlist->reproduzirTodos();
